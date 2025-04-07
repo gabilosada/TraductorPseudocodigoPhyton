@@ -1,0 +1,62 @@
+INICIO
+
+-CREAR una lista llamada “LIBROS”
+ 
+-MIENTRAS el sistema esté en ejecución:
+-MOSTRAR  menú principal que contiene:
+  -1.Registrar Libro
+  -2.Préstamo de Libro
+  -3.Devolver Libro
+  -4.Lista de Libros
+  -5.Salir del sistema
+
+ -LEER opción del usuario 
+ 
+ -SI opción = 1 ENTONCES:
+   -Pedir título del libro
+   -Pedir autor del libro
+   -Pedir código del libro
+   -LEER código
+  -SI se ingresa un número no entero:
+     - MOSTRAR “Error. El código debe ser un número entero” 
+   -SI se ingresa un valor entero:
+      -Crear libro con: título del libro, autor del libro, código del libro
+      -Agregar libro a la lista “LIBROS”
+      -Marcar libro como Disponible
+      -MOSTRAR “Libro registrado”
+ 
+ -MOSTRAR “Presione ENTER para volver al menú principal”
+
+   -SI opción = 2 ENTONCES:
+     -Pedir código del libro
+     -Buscar libro en la lista de “LIBROS”
+     -SI no existe MOSTRAR “Libro no existente”
+    -SI el libro existe:
+       -Pedir nombre de usuario
+       -marcar el libro como “prestado”
+       -guardar el nombre de usuario
+       -MOSTRAR “Préstamo realizado”
+ 
+ -MOSTRAR “Presione ENTER para volver al menú principal”
+
+  -SI opción = 3 ENTONCES:
+     -Pedir el código del libro
+     -SI el libro no existe MOSTRAR “Libro no existente”
+  -SI el libro existe: 
+     -Marcar como “disponible”
+     -borrar el nombre de usuario 
+     -MOSTRAR “Libro devuelto a la biblioteca”
+ 
+ -MOSTRAR “Presione ENTER para volver al menú principal”
+
+ -SI opción = 4 ENTONCES:
+   -PARA cada libro en la lista de “LIBROS”: MOSTRAR codigo, titulo, autor
+   -PARA cada libro en la lista de “LIBROS”: MOSTRAR si está disponible o prestado
+ 
+ -MOSTRAR “Presione ENTER para volver al menú principal”
+
+-SI opción = 5 ENTONCES:
+    -MOSTRAR “Saliendo del sistema”
+
+ 
+FIN
